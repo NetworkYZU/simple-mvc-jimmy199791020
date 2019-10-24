@@ -4,6 +4,7 @@
     Author     : lendle
 --%>
 
+<%@page import="javax.swing.BoxLayout"%>
 <%@page import="lendle.courses.network.simplemvc.BankCustomer"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -13,10 +14,10 @@
         <title>JSP Page</title>
     </head>
     <body>
+        </h1>你完了</h1>
         <%
             BankCustomer customer=(BankCustomer)request.getAttribute("customer");
+            out.print(customer.getFirstName());
         %>
-        <h1>Hello, <%=customer.getFirstName()%></h1>
-        注意您的支出！
     </body>
 </html>
